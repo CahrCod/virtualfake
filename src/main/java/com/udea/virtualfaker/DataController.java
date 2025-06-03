@@ -11,7 +11,7 @@ import java.util.Locale;
 @RestController
 public class DataController {
 
-    private final String locale = "en-US";
+    private static final String locale = "en-US";
 
     @GetMapping("/")
     public String healthCheck() {

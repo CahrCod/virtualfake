@@ -15,15 +15,13 @@ class VirtualfakerApplicationTests {
 	DataController dataController;
 
 	@Test
-	void healthCheck() {
-		assert(dataController.healthCheck()
-				.equals("HEALTH CHECK OK"));
+	void health(){
+		assertEquals("HEALTH CHECK OK", dataController.healthCheck());
 	}
 
 	@Test
-	void version() {
-		assert(dataController.version()
-				.equals("Version is 1.0.0"));
+	void version(){
+		assertEquals("Version is 1.0.0", dataController.version());
 	}
 
 	@Test
