@@ -15,32 +15,31 @@ class VirtualfakerApplicationTests {
 	DataController dataController;
 
 	@Test
-	public void healthCheck() {
+	void healthCheck() {
 		assert(dataController.healthCheck()
 				.equals("HEALTH CHECK OK"));
 	}
 
 	@Test
-	public void version() {
+	void version() {
 		assert(dataController.version()
 				.equals("Version is 1.0.0"));
 	}
 
 	@Test
-	public void nationsLength() {
+	void nationsLength() {
 		Integer nationsLength = dataController.getRandomNations().size();
 		assertEquals(10, nationsLength);
 	}
 
 	@Test
-	public void currenciesLength() {
+	void currenciesLength() {
 		Integer currenciesLength = dataController.getRandomCurrencies().size();
 		assertEquals(20, currenciesLength);
 	}
 
 	@Test
-	public void textRandomCurrenciesCodeFormat() {
-		DataController dataController = new DataController();
+	void textRandomCurrenciesCodeFormat() {
 		JsonNode response = dataController.getRandomCurrencies();
 		for(JsonNode currency : response){
 			String code = currency.get("code").asText();
@@ -49,8 +48,7 @@ class VirtualfakerApplicationTests {
 	}
 
 	@Test
-	public void testRandomNationsPerformance() {
-		DataController dataController = new DataController();
+	void testRandomNationsPerformance() {
 		long start = System.currentTimeMillis();
 		dataController.getRandomNations();
 		long end = System.currentTimeMillis();
@@ -59,7 +57,7 @@ class VirtualfakerApplicationTests {
 	}
 
 	@Test
-	public void aviationLength() {
+	void aviationLength() {
 		Integer aviationLength = dataController.getRandomAviation().size();
 		assertEquals(20, aviationLength);
 	}
