@@ -68,8 +68,8 @@ jobs:
           restore-keys: ${{ runner.os }}-m2
       #Analyze project with SonarCloud
       - name: Analyze with SonarCloud
-        run: mvn -B verify sonar:sonar -Dsonar.projectKey=CahrCod_virtualfake -Dsonar.organization=cahrcod777 -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR TOKEN
+        run: mvn -B verify sonar:sonar -Dsonar.projectKey=CahrCod_virtualfake -Dsonar.organization=cahrcod777 -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN
         env:
-          GITHUB TOKEN: ${{ secrets.GITHUB TOKEN }}
-          SONAR TOKEN: $ {{ secrets.SONAR TOKEN }}
+          GITHUB TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR TOKEN: $ {{ secrets.SONAR_TOKEN }}
 
