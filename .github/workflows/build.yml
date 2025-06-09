@@ -108,4 +108,4 @@ jobs:
           #Set an artifact name
           name: artifact
           #From this path
-          path: target/virtualfake-0.0.1-SNAPSHOT.jar
+          path: target/virtualfaker-0.0.1-SNAPSHOT.jar
