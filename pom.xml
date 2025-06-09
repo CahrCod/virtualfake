@@ -11,7 +11,7 @@
 	<groupId>com.udea</groupId>
 	<artifactId>virtualfake</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>virtualfaker</name>
+	<name>virtual faker</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>
